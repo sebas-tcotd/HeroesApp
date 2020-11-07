@@ -1,0 +1,11 @@
+<h1 class="animated fadeIn">Resultado de búsqueda: <small>{{nombre}}</small></h1>
+<hr>
+
+<div class="alert alert-primary" role="alert" *ngIf='heroes.length == 0'>
+  No hay resultados para <strong>{{nombre}}</strong>
+</div>
+
+<div class="card-columns">
+  <!-- *ngFor="let heroe of heroes, let i = index" -->
+  <app-heroe-tarjeta [heroe]="heroe" [index]="i" *ngFor="let heroe of heroes, let i = index"></app-heroe-tarjeta>
+</div>
